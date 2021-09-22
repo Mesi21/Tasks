@@ -53,7 +53,7 @@ const displayTasks = () => {
     input.setAttribute('type', 'checkbox');
     input.setAttribute('value', task.description);
     input.setAttribute('id', task.index);
-    label.htmlFor = `${task.index}`; 
+    label.htmlFor = `${task.index}`;
     label.innerText = `Task ${task.index + 1}`;
     row.appendChild(label);
     row.appendChild(input);
