@@ -1,28 +1,28 @@
 import _ from 'lodash';
 import './style.css';
-import { navBar } from './nav.js';
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
+import navBar from './nav.js';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
 
 const tasks = [
   {
     description: 'task1',
     completed: false,
-    index: 0
+    index: 0,
   },
   {
     description: 'task2',
     completed: false,
-    index: 1
+    index: 1,
   },
   {
     description: 'task3',
     completed: false,
-    index: 2
+    index: 2,
   },
-]
+];
 
 const displayTasks = () => {
   const listItems = document.getElementById('listItems');
@@ -32,8 +32,8 @@ const displayTasks = () => {
   const newBtn = document.createElement('button');
   const clearAllFinished = document.createElement('div');
   header.setAttribute('id', 'header-ele');
-  header.innerHTML = `Today's todos`;
-  add.setAttribute('id','add-new')
+  header.innerHTML = 'Today\'s todos';
+  add.setAttribute('id', 'add-new');
   addNewTodo.setAttribute('type', 'text');
   addNewTodo.setAttribute('placeholder', 'Add to your list');
   newBtn.setAttribute('type', 'submit');
@@ -46,15 +46,14 @@ const displayTasks = () => {
   const list = document.createElement('ul');
   list.className = ('toDos');
   tasks.forEach((task) => {
-    const row = document.createElement('li')
+    const row = document.createElement('li');
     const input = document.createElement('input');
     const dots = document.createElement('i');
-    let label = document.createElement("label");
-    dots.setAttribute('class', "fas fa-ellipsis-v");
+    const label = document.createElement('label');
+    dots.setAttribute('class', 'fas fa-ellipsis-v');
     input.setAttribute('type', 'checkbox');
     input.setAttribute('value', task.description);
     input.setAttribute('id', task.index);
-    console.log(input)
     label.htmlFor = `${task.index}`; 
     label.innerText = `Task ${task.index + 1}`;
     row.appendChild(label);
