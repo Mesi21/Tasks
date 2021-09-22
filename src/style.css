@@ -3,8 +3,14 @@ body {
   background-color: rgb(235, 235, 235);
 }
 
-h1, h2, h3,
-p, div, a, ul, li {
+h1,
+h2,
+h3,
+p,
+div,
+a,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -29,8 +35,8 @@ p, div, a, ul, li {
   text-align: left;
   border: 2px solid rgb(235, 235, 235);
   -webkit-box-shadow: 6px 6px 21px 5px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    6px 6px 21px 5px rgba(50, 50, 50, 0.75);
-  box-shadow:         6px 6px 21px 5px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 6px 6px 21px 5px rgba(50, 50, 50, 0.75);
+  box-shadow: 6px 6px 21px 5px rgba(50, 50, 50, 0.75);
 }
 
 li {

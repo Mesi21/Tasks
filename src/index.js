@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import './style.css';
 import navBar from './nav.js';
 import '@fortawesome/fontawesome-free/js/fontawesome';
@@ -60,7 +59,7 @@ const displayTasks = () => {
     row.appendChild(input);
     row.appendChild(dots);
     list.appendChild(row);
-  })
+  });
   clearAllFinished.setAttribute('id', 'clear');
   clearAllFinished.innerHTML = 'Clear all completed';
   listItems.appendChild(list);

@@ -6,6 +6,6 @@ const navBar = () => {
   logo.setAttribute('id', 'logo');
   nav.appendChild(logo);
   return nav;
-}
+};
 
 export default navBar;
