@@ -24,8 +24,8 @@ class Todo {
         completed: false,
         index: 2,
       },
-    ]; 
-}
+    ];
+  }
 
   localSave() {
     localStorage.setItem('AllTasks', JSON.stringify(this.tasks));
