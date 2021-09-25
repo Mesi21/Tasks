@@ -1,46 +1,54 @@
-# To-Do-List
+#...soon to be updated
 
-One paragraph statement about the project.
+# To-Do
 
-screenshot
+This project is about a ToDo app where user can add different tasks, remove them, mark as complete or clear the board. The page was built using JavaScript.
 
-Additional description about the project and its features.
+- - - -
+Screenshot
 
-Built With
-Major languages
-Frameworks
-Technologies used
-Live Demo
-Live Demo Link
 
-Getting Started
-This is an example of how you may give instructions on setting up your project locally. Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.
+# Built With
 
-To get a local copy up and running follow these simple example steps.
+* JavaScript
+* HTML
+* CSS
 
-Prerequisites
-Setup
-Install
-Usage
-Run tests
-Deployment
-Author
-:bust_in_silhouette: Author1
+# Getting Started
 
-GitHub: @githubhandle
-Twitter: @twitterhandle
-LinkedIn: LinkedIn
-:handshake: Contributing
-Contributions, issues, and feature requests are welcome!
+To get a local copy up and running follow the next steps:
+> Clone the repo to you local machine.
+```bash
+    git clone "https://github.com/Mesi21/To-Do-List.git"
+```
 
-Feel free to check the issues page.
+## Author
 
-Show your support
-Give a :star: if you like this project!
+#### :bust_in_silhouette: Molnar Emese 
+  - [Mesi21](https://github.com/Mesi21)
+  - [Email:](mailto:mse212002@gmail.com) - mse212002@gmail.com
+  - [Portfolio]()
+  - [LinkedIn](https://www.linkedin.com/in/emesemesimolnar/).  
+  - [Twitter](https://twitter.com/buksimesi21) 
+  - [AngelList]()
 
-Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
-:memo: License
-This project is MIT licensed.
+
+## 🤝 Contributing
+All contributions, issues and feature requests are welcome!
+
+1. Fork it (https://github.com/Mesi21/To-Do-List.git)
+2. Create your working branch (git checkout -b [choose-a-name])
+3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
+4. Push to the branch (git push origin [chosen-name])
+5. Create a new Pull Request
+
+## Show your support
+Give a ⭐️ if you like this project.
+
+## :wave: Acknowledgments
+
+* Morning session team
+* Standup team
+
+# Licence
+This project is [MIT](license.txt) licensed.
