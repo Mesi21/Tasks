@@ -1,6 +1,7 @@
 import './style.css';
 import navBar from './nav.js';
 import createEle from './helpers/createEle.js';
+import createTask from './helpers/createTasks.js';
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
@@ -8,36 +9,11 @@ import '@fortawesome/fontawesome-free/js/brands';
 
 class Todo {
   constructor() {
-    this.tasks = [
-      {
-        description: 'task1',
-        completed: false,
-        index: 0,
-      },
-      {
-        description: 'task2',
-        completed: false,
-        index: 1,
-      },
-      {
-        description: 'task3',
-        completed: false,
-        index: 2,
-      },
-    ];
+    this.tasks = [];
   }
 
   localSave() {
     localStorage.setItem('AllTasks', JSON.stringify(this.tasks));
-  }
-
-  toggleState(checkBox, item) {
-    if (checkBox.checked) {
-      this.item.completed = true;
-    } else {
-      this.item.completed = false;
-    }
-    return item;
   }
 
   displayTasks() {
@@ -47,13 +23,13 @@ class Todo {
     }
     const header = createEle('div', null, 'header-ele', 'Today\'s todos');
     const add = createEle('div', null, 'add-new', null);
-    const addNewTodo = createEle('input', null, 'to-add', null, null);
-    const newBtn = createEle('button', null, 'submit', 'Add');
+    const newTodo = createEle('input', 'newToAdd', 'to-add', null);
+    const newBtn = createEle('button', 'submit', 'submit', 'Add');
     const clearAllFinished = createEle('div', null, 'clear', 'Clear all completed');
-    addNewTodo.setAttribute('type', 'text');
-    addNewTodo.setAttribute('placeholder', 'Add to your list');
+    newTodo.setAttribute('type', 'text');
+    newTodo.setAttribute('placeholder', 'Add to your list');
     newBtn.setAttribute('type', 'submit');
-    add.appendChild(addNewTodo);
+    add.appendChild(newTodo);
     add.appendChild(newBtn);
     listItems.appendChild(header);
     listItems.appendChild(add);
@@ -75,6 +51,12 @@ class Todo {
       row.appendChild(input);
       row.appendChild(dots);
       list.appendChild(row);
+    });
+    newBtn.addEventListener('click', () => {
+      createTask(this.tasks, newTodo.value);
+      this.localSave();
+      window.onload = () => this.displayTasks;
+      window.location.reload();
     });
     clearAllFinished.setAttribute('id', 'clear');
     listItems.appendChild(list);
