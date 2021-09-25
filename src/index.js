@@ -24,18 +24,18 @@ class Todo {
         completed: false,
         index: 2,
       },
-    ]; }
+    ];}
 
   localSave() {
     localStorage.setItem('AllTasks', JSON.stringify(this.tasks));
-  } 
-  
+  }
+
   toggleState(checkBox, item) {
     if (checkBox.checked) {
-        this.item.completed = true;
+      this.item.completed = true;
     } else {
-        this.item.completed = false;
-    };
+      this.item.completed = false;
+    }
     return item;
   }
 
