@@ -84,5 +84,4 @@ class Todo {
 }
 document.body.appendChild(navBar());
 const newTodo = new Todo();
-newTodo.localSave();
 newTodo.displayTasks();
